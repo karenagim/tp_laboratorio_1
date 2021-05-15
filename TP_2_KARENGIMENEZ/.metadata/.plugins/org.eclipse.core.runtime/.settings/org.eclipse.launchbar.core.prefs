@@ -1,0 +1,9 @@
+LaunchTargetManager/configs/TP2_GimenezKaren.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/TP_2_GIMENEZ.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:TP2_GimenezKaren.exe,org.eclipse.launchbar.core.descriptorType.default\:TP_2_GIMENEZ.exe
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:TP2_GimenezKaren.exe/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:TP2_GimenezKaren.exe/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

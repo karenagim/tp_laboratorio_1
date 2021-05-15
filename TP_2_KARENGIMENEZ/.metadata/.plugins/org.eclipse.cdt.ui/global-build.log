@@ -1,0 +1,10 @@
+16:48:40 **** Clean-only build of configuration Debug for project TP_2_GIMENEZ ****
+rm -rf src/TP_2_GIMENEZ.d src/menues.d src/menues.o src/ArrayEmployees.d src/karen-io.d TP_2_GIMENEZ.exe src/sectorEmployees.d src/sectorEmployees.o src/ArrayEmployees.o src/TP_2_GIMENEZ.o src/karen-io.o 
+16:48:43 **** Rebuild of configuration Debug for project TP_2_GIMENEZ ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menues.o" "..\\src\\menues.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\sectorEmployees.o" "..\\src\\sectorEmployees.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\karen-io.o" "..\\src\\karen-io.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_2_GIMENEZ.o" "..\\src\\TP_2_GIMENEZ.c" 
+gcc -o TP_2_GIMENEZ.exe "src\\ArrayEmployees.o" "src\\TP_2_GIMENEZ.o" "src\\karen-io.o" "src\\menues.o" "src\\sectorEmployees.o" 
