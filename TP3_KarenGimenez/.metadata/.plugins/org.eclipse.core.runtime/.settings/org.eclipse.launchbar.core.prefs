@@ -1,0 +1,9 @@
+LaunchTargetManager/configs/TP3.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/tp3_windows.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:tp3_windows.exe,org.eclipse.launchbar.core.descriptorType.default\:TP3.exe
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:tp3_windows.exe/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:tp3_windows.exe/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
