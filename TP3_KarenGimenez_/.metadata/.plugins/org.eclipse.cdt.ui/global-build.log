@@ -1,0 +1,491 @@
+Info: Nothing to build for pruebaTp3
+11:52:10 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_saveAsText':
+..\Controller.c:197:37: warning: passing argument 2 of 'employee_getAll_Getters' makes pointer from integer without a cast [-Wint-conversion]
+  197 |     if(employee_getAll_Getters(pEmp,auxId, auxNombre, auxHT, auxSueldo)==1)
+      |                                     ^~~~~
+      |                                     |
+      |                                     int
+In file included from ..\Controller.c:5:
+..\Employee.h:165:49: note: expected 'int *' but argument is of type 'int'
+  165 | int employee_getAll_Getters(Employee* pEmp,int* id,char* nombre,int* horasTrabajadas,float* sueldo);
+      |                                            ~~~~~^~
+..\Controller.c:197:55: warning: passing argument 4 of 'employee_getAll_Getters' makes pointer from integer without a cast [-Wint-conversion]
+  197 |     if(employee_getAll_Getters(pEmp,auxId, auxNombre, auxHT, auxSueldo)==1)
+      |                                                       ^~~~~
+      |                                                       |
+      |                                                       int
+In file included from ..\Controller.c:5:
+..\Employee.h:165:70: note: expected 'int *' but argument is of type 'int'
+  165 | int employee_getAll_Getters(Employee* pEmp,int* id,char* nombre,int* horasTrabajadas,float* sueldo);
+      |                                                                 ~~~~~^~~~~~~~~~~~~~~
+..\Controller.c:197:62: error: incompatible type for argument 5 of 'employee_getAll_Getters'
+  197 |     if(employee_getAll_Getters(pEmp,auxId, auxNombre, auxHT, auxSueldo)==1)
+      |                                                              ^~~~~~~~~
+      |                                                              |
+      |                                                              float
+In file included from ..\Controller.c:5:
+..\Employee.h:165:93: note: expected 'float *' but argument is of type 'float'
+  165 | int employee_getAll_Getters(Employee* pEmp,int* id,char* nombre,int* horasTrabajadas,float* sueldo);
+      |                                                                                      ~~~~~~~^~~~~~
+11:52:24 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_saveAsText':
+..\Controller.c:197:8: warning: 'auxId' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  197 |     if(employee_getAll_Getters(pEmp,auxId, auxNombre, auxHT, auxSueldo)==1)
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:197:8: warning: 'auxHT' may be used uninitialized in this function [-Wmaybe-uninitialized]
+..\Controller.c:197:8: warning: 'auxSueldo' may be used uninitialized in this function [-Wmaybe-uninitialized]
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+..\Employee.c:480:5: error: conflicting types for 'employee_getAll_Getters'
+  480 | int employee_getAll_Getters(Employee* pEmp,int* id,char* nombre,int* horasTrabajadas,float* sueldo)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\Employee.c:7:
+..\Employee.h:165:5: note: previous declaration of 'employee_getAll_Getters' was here
+  165 | int employee_getAll_Getters(Employee* pEmp,int id,char* nombre,int horasTrabajadas,float sueldo);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+..\Employee.c: In function 'employee_getAll_Getters':
+..\Employee.c:499:32: warning: passing argument 2 of 'employee_getId' from incompatible pointer type [-Wincompatible-pointer-types]
+  499 |   get_id= employee_getId(pEmp, &id);
+      |                                ^~~
+      |                                |
+      |                                int **
+..\Employee.c:65:41: note: expected 'int *' but argument is of type 'int **'
+   65 | int employee_getId(Employee* pEmp, int* pId)
+      |                                    ~~~~~^~~
+..\Employee.c:501:52: warning: passing argument 2 of 'employee_getHorasTrabajadas' from incompatible pointer type [-Wincompatible-pointer-types]
+  501 |   get_horasTrab= employee_getHorasTrabajadas(pEmp, &horasTrabajadas);
+      |                                                    ^~~~~~~~~~~~~~~~
+      |                                                    |
+      |                                                    int **
+..\Employee.c:78:53: note: expected 'int *' but argument is of type 'int **'
+   78 | int employee_getHorasTrabajadas(Employee* pEmp,int* pHorasTrab)
+      |                                                ~~~~~^~~~~~~~~~
+..\Employee.c:502:40: warning: passing argument 2 of 'employee_getSueldo' from incompatible pointer type [-Wincompatible-pointer-types]
+  502 |   get_sueldo= employee_getSueldo(pEmp, &sueldo);
+      |                                        ^~~~~~~
+      |                                        |
+      |                                        float **
+..\Employee.c:103:47: note: expected 'float *' but argument is of type 'float **'
+  103 | int employee_getSueldo(Employee* pEmp ,float* pSueldo)
+      |                                        ~~~~~~~^~~~~~~
+11:52:46 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+..\Employee.c:480:5: error: conflicting types for 'employee_getAll_Getters'
+  480 | int employee_getAll_Getters(Employee* pEmp,int* id,char* nombre,int* horasTrabajadas,float* sueldo)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\Employee.c:7:
+..\Employee.h:165:5: note: previous declaration of 'employee_getAll_Getters' was here
+  165 | int employee_getAll_Getters(Employee* pEmp,int id,char* nombre,int horasTrabajadas,float sueldo);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+11:53:07 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+..\Employee.c: In function 'employee_getAll_Getters':
+..\Employee.c:499:32: warning: passing argument 2 of 'employee_getId' makes pointer from integer without a cast [-Wint-conversion]
+  499 |   get_id= employee_getId(pEmp, id);
+      |                                ^~
+      |                                |
+      |                                int
+..\Employee.c:65:41: note: expected 'int *' but argument is of type 'int'
+   65 | int employee_getId(Employee* pEmp, int* pId)
+      |                                    ~~~~~^~~
+..\Employee.c:501:52: warning: passing argument 2 of 'employee_getHorasTrabajadas' makes pointer from integer without a cast [-Wint-conversion]
+  501 |   get_horasTrab= employee_getHorasTrabajadas(pEmp, horasTrabajadas);
+      |                                                    ^~~~~~~~~~~~~~~
+      |                                                    |
+      |                                                    int
+..\Employee.c:78:53: note: expected 'int *' but argument is of type 'int'
+   78 | int employee_getHorasTrabajadas(Employee* pEmp,int* pHorasTrab)
+      |                                                ~~~~~^~~~~~~~~~
+..\Employee.c:502:40: error: incompatible type for argument 2 of 'employee_getSueldo'
+  502 |   get_sueldo= employee_getSueldo(pEmp, sueldo);
+      |                                        ^~~~~~
+      |                                        |
+      |                                        float
+..\Employee.c:103:47: note: expected 'float *' but argument is of type 'float'
+  103 | int employee_getSueldo(Employee* pEmp ,float* pSueldo)
+      |                                        ~~~~~~~^~~~~~~
+11:53:39 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:53:43 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+11:55:04 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+11:57:28 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+11:57:38 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+11:58:32 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+12:03:48 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+..\Employee.c: In function 'Employee_Sort':
+..\Employee.c:948:5: error: break statement not within loop or switch
+  948 |     break;
+      |     ^~~~~
+..\Employee.c:950:6: error: 'default' label not within a switch statement
+  950 |      default:
+      |      ^~~~~~~
+..\Employee.c:953:5: error: break statement not within loop or switch
+  953 |     break;
+      |     ^~~~~
+..\Employee.c:900:9: warning: variable 'todoOk' set but not used [-Wunused-but-set-variable]
+  900 |     int todoOk;
+      |         ^~~~~~
+..\Employee.c: At top level:
+..\Employee.c:956:5: error: expected identifier or '(' before 'return'
+  956 |     return todoOk;
+      |     ^~~~~~
+..\Employee.c:957:1: error: expected identifier or '(' before '}' token
+  957 | }
+      | ^
+..\Employee.c: In function 'Employee_Sort':
+..\Employee.c:955:5: warning: control reaches end of non-void function [-Wreturn-type]
+  955 |     }
+      |     ^
+12:04:09 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+..\Employee.c: In function 'Employee_Sort':
+..\Employee.c:948:5: error: break statement not within loop or switch
+  948 |     break;
+      |     ^~~~~
+..\Employee.c:950:6: error: 'default' label not within a switch statement
+  950 |      default:
+      |      ^~~~~~~
+..\Employee.c:953:5: error: break statement not within loop or switch
+  953 |     break;
+      |     ^~~~~
+12:04:56 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+..\Employee.c: In function 'Employee_Sort':
+..\Employee.c:956:1: error: expected declaration or statement at end of input
+  956 | }
+      | ^
+..\Employee.c:956:1: warning: control reaches end of non-void function [-Wreturn-type]
+  956 | }
+      | ^
+12:05:19 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:05:27 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+12:10:45 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_saveAsText':
+..\Controller.c:197:8: warning: 'auxId' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  197 |     if(employee_getAll_Getters(pEmp,auxId, auxNombre, auxHT, auxSueldo)==1)
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:197:8: warning: 'auxHT' may be used uninitialized in this function [-Wmaybe-uninitialized]
+..\Controller.c:197:8: warning: 'auxSueldo' may be used uninitialized in this function [-Wmaybe-uninitialized]
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:10:52 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+12:17:08 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+12:19:42 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_saveAsText':
+..\Controller.c:196:37: warning: passing argument 2 of 'employee_getAll_Getters' makes integer from pointer without a cast [-Wint-conversion]
+  196 |     if(employee_getAll_Getters(pEmp,&auxId, auxNombre, &auxHT, &auxSueldo)==1)
+      |                                     ^~~~~~
+      |                                     |
+      |                                     int *
+In file included from ..\Controller.c:5:
+..\Employee.h:165:48: note: expected 'int' but argument is of type 'int *'
+  165 | int employee_getAll_Getters(Employee* pEmp,int id,char* nombre,int horasTrabajadas,float sueldo);
+      |                                            ~~~~^~
+..\Controller.c:196:56: warning: passing argument 4 of 'employee_getAll_Getters' makes integer from pointer without a cast [-Wint-conversion]
+  196 |     if(employee_getAll_Getters(pEmp,&auxId, auxNombre, &auxHT, &auxSueldo)==1)
+      |                                                        ^~~~~~
+      |                                                        |
+      |                                                        int *
+In file included from ..\Controller.c:5:
+..\Employee.h:165:68: note: expected 'int' but argument is of type 'int *'
+  165 | int employee_getAll_Getters(Employee* pEmp,int id,char* nombre,int horasTrabajadas,float sueldo);
+      |                                                                ~~~~^~~~~~~~~~~~~~~
+..\Controller.c:196:64: error: incompatible type for argument 5 of 'employee_getAll_Getters'
+  196 |     if(employee_getAll_Getters(pEmp,&auxId, auxNombre, &auxHT, &auxSueldo)==1)
+      |                                                                ^~~~~~~~~~
+      |                                                                |
+      |                                                                float *
+In file included from ..\Controller.c:5:
+..\Employee.h:165:90: note: expected 'float' but argument is of type 'float *'
+  165 | int employee_getAll_Getters(Employee* pEmp,int id,char* nombre,int horasTrabajadas,float sueldo);
+      |                                                                                    ~~~~~~^~~~~~
+12:20:25 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_saveAsText':
+..\Controller.c:197:8: warning: 'auxId' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  197 |     if(employee_getAll_Getters(pEmp,auxId, auxNombre, auxHT, auxSueldo)==1)
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:197:8: warning: 'auxHT' may be used uninitialized in this function [-Wmaybe-uninitialized]
+..\Controller.c:197:8: warning: 'auxSueldo' may be used uninitialized in this function [-Wmaybe-uninitialized]
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+12:36:25 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_saveAsText':
+..\Controller.c:197:8: warning: 'auxId' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  197 |     if(employee_getAll_Getters(pEmp,auxId, auxNombre, auxHT, auxSueldo)==1)
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:197:8: warning: 'auxHT' may be used uninitialized in this function [-Wmaybe-uninitialized]
+..\Controller.c:197:8: warning: 'auxSueldo' may be used uninitialized in this function [-Wmaybe-uninitialized]
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+12:52:53 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+..\Employee.c: In function 'employee_CompareByHoursW':
+..\Employee.c:320:38: error: 'horasT1' undeclared (first use in this function)
+  320 |   employee_getHorasTrabajadas(emp1, &horasT1);
+      |                                      ^~~~~~~
+..\Employee.c:320:38: note: each undeclared identifier is reported only once for each function it appears in
+..\Employee.c:321:38: error: 'horasT2' undeclared (first use in this function)
+  321 |   employee_getHorasTrabajadas(emp2, &horasT2);
+      |                                      ^~~~~~~
+12:53:18 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:53:24 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+12:57:11 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+13:03:48 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:03:53 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+13:04:30 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+13:04:53 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+13:15:21 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+..\Employee.c: In function 'employee_CompareBySalary':
+..\Employee.c:331:38: warning: passing argument 2 of 'employee_getSueldo' from incompatible pointer type [-Wincompatible-pointer-types]
+  331 |   salaryE1= employee_getSueldo(emp1, &salaryE1);
+      |                                      ^~~~~~~~~
+      |                                      |
+      |                                      int *
+..\Employee.c:103:47: note: expected 'float *' but argument is of type 'int *'
+  103 | int employee_getSueldo(Employee* pEmp ,float* pSueldo)
+      |                                        ~~~~~~~^~~~~~~
+..\Employee.c:332:38: warning: passing argument 2 of 'employee_getSueldo' from incompatible pointer type [-Wincompatible-pointer-types]
+  332 |   salaryE2= employee_getSueldo(emp2, &salaryE2);
+      |                                      ^~~~~~~~~
+      |                                      |
+      |                                      int *
+..\Employee.c:103:47: note: expected 'float *' but argument is of type 'int *'
+  103 | int employee_getSueldo(Employee* pEmp ,float* pSueldo)
+      |                                        ~~~~~~~^~~~~~~
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+13:15:49 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+13:18:25 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o menues.o "..\\menues.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:19:15 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:19:21 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+13:21:07 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:179:25: warning: implicit declaration of function 'tolower' [-Wimplicit-function-declaration]
+  179 |              confirma = tolower(getChar("\nconfirma salida? S / N\n"));
+      |                         ^~~~~~~
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+13:21:28 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+13:24:15 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o menues.o "..\\menues.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+13:27:07 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+13:28:36 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:28:44 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+13:29:59 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+13:31:31 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:31:34 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:31:37 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+13:33:52 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:33:55 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+13:34:44 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:34:46 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+13:37:15 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:37:17 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+13:40:39 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_saveAsText':
+..\Controller.c:198:8: warning: 'auxId' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  198 |     if(employee_getAll_Getters(pEmp,auxId, auxNombre, auxHT, auxSueldo)==1)
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:198:8: warning: 'auxHT' may be used uninitialized in this function [-Wmaybe-uninitialized]
+..\Controller.c:198:8: warning: 'auxSueldo' may be used uninitialized in this function [-Wmaybe-uninitialized]
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+13:44:11 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+13:45:46 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o menues.o "..\\menues.c" 
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o pruebaTp3.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+14:25:19 **** Rebuild of configuration Debug for project TP3KarenG ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o menues.o "..\\menues.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o karen-io.o "..\\karen-io.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" "..\\.metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_saveAsText':
+..\Controller.c:198:8: warning: 'auxId' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  198 |     if(employee_getAll_Getters(pEmp,auxId, auxNombre, auxHT, auxSueldo)==1)
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:198:8: warning: 'auxHT' may be used uninitialized in this function [-Wmaybe-uninitialized]
+..\Controller.c:198:8: warning: 'auxSueldo' may be used uninitialized in this function [-Wmaybe-uninitialized]
+gcc "-LC:\\Users\\Compu casa\\Desktop\\TP3_KarenGimenez_\\pruebaTp3" -o TP3KarenG.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" Controller.o Employee.o karen-io.o main.o menues.o parser.o -lLinkedList 
+Info: Nothing to build for TP3KarenG
